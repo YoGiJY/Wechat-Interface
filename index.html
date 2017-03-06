@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>捷普新春祝福大放送</title>
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="audio J_audio_ctrl"></div>
+    <audio autoplay="autoplay" loop="loop" class="hide J_audio">
+        <source src="audio/audio.ogg" type="audio/ogg">
+        <source src="audio/audio.mp3" type="audio/mpeg">
+        <source src="audio/audio.wav" type="audio/wav">
+    </audio>
+</div>
+<div class="loading-chicken J_loading">
+    <div class="chicken"></div>
+    <i class="loading">loading...</i>
+</div>
+<div class="tip-mask hide J_tip_mask">
+    <div class="tip">
+        <div class="head"></div>
+        <div class="body">
+            <ol>
+                <li><i>制作你的新年贺卡</i></li>
+                <li><i>分享给家人朋友送上祝福</i></li>
+                <li><i>捷普将随机抽取幸运用户,送出新年大礼包</i></li>
+                <li><i>关注捷普官方公众号,我们将在春节前后进行3轮抽奖并公布获奖者名单</i></li>
+            </ol>
+            <img src="img/barcode.png" class="barcode">
+            <span class="scan-text">扫描二维码关注</span>
+            <span class="jabil-text">捷普公众号</span>
+        </div>
+        <div class="foot"></div>
+        <div class="close J_tip_close"></div>
+    </div>
+</div>
+<div class="card-swiper hide J_card_swiper">
+    <div class="swiper-container J_card_swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card-item card-item-1" data-id="0"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-item card-item-2" data-id="1"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-item card-item-3" data-id="2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-item card-item-4" data-id="3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-shadow"></div>
+</div>
+<div class="mask hide J_mask">
+    <div class="swiper-container text-swiper J_text_swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="text-item text-item-1"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-item text-item-2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-item text-item-3"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-item text-item-4"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-item text-item-5"></div>
+            </div>
+        </div>
+        <!-- 以下设置左右切换按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="text-select J_submit_text">就选这个</div>
+</div>
+<div class="footer hide J_footer">
+    <div class="float-left select-card active J_card_tab">
+        <div class="card-btn"></div>
+        <span class="arrow"></span>
+    </div>
+    <div class="float-left select-text J_text_tab">
+        <div class="text-btn"></div>
+        <span class="arrow"></span>
+    </div>
+    <div class="float-left submit J_submit">
+        <div class="submit-btn"></div>
+    </div>
+</div>
+<div class="result hide J_result">
+    <img class="J_result_img" src="img/r12.png">
+    <span class="name J_name"></span>
+    <p class="tip">长按图片保存贺卡到相册</p>
+    <div class="send J_send"></div>
+</div>
+<div class="share-tip-mask hide J_share_tip_mask">
+    <div class="share-tip"></div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>

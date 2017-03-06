@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>捷普新春祝福大放送</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <style>
+        .result{width:100%;text-align:center;}
+        .result img{width:90%;}
+        .result .name{position:absolute;font-family:STXihei, Droid Sans, 'Microsoft Yahei', Helvetica;color:#e33d3d;text-decoration:underline;left: 66%;}
+        .make-card{position:absolute;width:245px;height:42px;bottom:30px;left:50%;margin-left:-123px;background:url("img/make-card.png") no-repeat;-webkit-background-size:cover;background-size:cover;}
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="audio J_audio_ctrl"></div>
+    <audio autoplay="autoplay" loop="loop" class="hide J_audio">
+        <source src="audio/audio.ogg" type="audio/ogg">
+        <source src="audio/audio.mp3" type="audio/mpeg">
+        <source src="audio/audio.wav" type="audio/wav">
+    </audio>
+</div>
+<div class="loading-chicken J_loading">
+    <div class="chicken"></div>
+    <i class="loading">loading...</i>
+</div>
+<div class="result hide J_result">
+    <img src="">
+    <span class="name J_name"></span>
+</div>
+<a href="index.html" class="make-card hide J_make_card"></a>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var cardId = getUrlParam('cardId');
+        var username = getUrlParam('username');
+        var $audio = $('.J_audio')[0];
+        var $ctrl = $('.J_audio_ctrl');
+        var $name = $('.J_name');
+        if(cardId) {
+            $('.J_result img').attr('src', 'img/' + cardId + '.png');
+            $name.text('by ' + username);
+            $('.J_result').removeClass('hide');
+            $('.J_loading').addClass('hide');
+            $('.J_make_card').removeClass('hide');
+            switch(parseInt(cardId.substr(1, 1))) {
+                case 0:
+                    $name.css('top', '52%');
+                    break;
+                case 1:
+                    $name.css('top', '63%');
+                    break;
+                case 2:
+                    $name.css('top', '64%');
+                    break;
+                case 3:
+                    $name.css('top', '77%');
+                    break;
+            }
+        }
+        $('body').on('click', '.J_audio_ctrl', function() {
+            if($audio.paused) {
+                $audio.play();
+                $ctrl.hasClass('pause') && $ctrl.removeClass('pause');
+            } else {
+                $audio.pause();
+                !$ctrl.hasClass('pause') && $ctrl.addClass('pause');
+            }
+        });
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURIComponent(r[2]); return null;
+        }
+    });
+</script>
+</body>
+</html>
