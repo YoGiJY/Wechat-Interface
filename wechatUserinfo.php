@@ -89,9 +89,11 @@ $_SESSION['nickname'] = $nickname;
 /////////////////////////////////////////////////////////
 //用户用于共享
 
+
+/*Sat May 27 11:30:55 CST 2017*/
 require_once('JSSDK.php');
-$app_id = 'wx7163d30cc3b0bd5d';
-$app_secret = '5e91a9be55a0be3398813aaabb3b444e';
+$app_id = 'ww7163d30cc3b0bd5d';
+$app_secret = '6e91a9be55a0be3398813aaabb3b444e';
 
 $jssdk = new JSSDK($app_id,$app_secret);
 $signPackage = array("appId"=>$app_id,"nonceStr"=>'abcde',"timestamp"=>'123',"signature"=>'321');
